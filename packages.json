@@ -1,3 +1,4 @@
 {
-  "events":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/Events.lua"
+  "events":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/Events.lua",
+  "filemanager":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/FileManager.lua"
 }
