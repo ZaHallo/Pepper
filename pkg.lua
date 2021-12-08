@@ -1,4 +1,4 @@
-local console = require("Pepper.internal.console")
+local console = require("PepperLua.internal.console")
 
 local main = {}
 
