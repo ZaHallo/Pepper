@@ -4,7 +4,7 @@ Pepper.Signals.connectionmeta = {}
 
 --Event
 function Pepper.Signals.Event()
-	local this = setmetatable({}, {__invoke = Pepper.Signals.eventmeta})
+	local this = setmetatable({}, {__index = Pepper.Signals.eventmeta})
 
 	this.Connections = {}
 
@@ -25,7 +25,7 @@ end
 
 --Connection
 function Pepper.Signals.Connection(Event, ToCall)
-	local this = setmetatable({}, {__invoke = Pepper.Signals.connectionmeta})
+	local this = setmetatable({}, {__index = Pepper.Signals.connectionmeta})
 
 	this.ConnectedEvent = Event
 	this.Lambda = ToCall
