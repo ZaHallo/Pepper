@@ -19,7 +19,7 @@ end
 
 function Pepper.Signals.eventmeta:Connect(ToCall)
 	local NewConnection = Pepper.Signals.Connection(self,ToCall)
-	this.Connections[NewConnection] = NewConnection
+	self.Connections[NewConnection] = NewConnection
 	return NewConnection
 end
 
