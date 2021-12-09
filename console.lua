@@ -5,7 +5,11 @@ function main.console(command)
 end
 
 function main.consoleReturn(command)
-   return io.popen(command):lines("*a")
+	local strfull = ""
+	for str in io.popen(command):lines("*a") do
+		strfull = strfull..str.."\n"
+	end
+  return strfull
 end
 
 function main.directory_exists( sPath )
