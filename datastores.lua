@@ -12,7 +12,7 @@ function main.open(name,scope)
 end
 
 function meta:write(key,value)
-	return os.execute("curl $REPLIT_DB_URL '"..self.datastore.."."..key.."="..value.."'")==0
+	return os.execute("curl $REPLIT_DB_URL -d '"..self.datastore.."."..key.."="..value.."'")==0
 end
 function meta:read(key)
 	local response = Pepper.Console.consoleReturn("curl $REPLIT_DB_URL/"..self.datastore.."."..key)
