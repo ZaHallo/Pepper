@@ -3,4 +3,5 @@
   "filemanager":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/FileManager.lua",
   "http":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/http.lua",
   "string":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/string.lua",
+  "datastores":"https://raw.githubusercontent.com/ZaHallo/Pepper/main/datastores.lua",
 }
