@@ -1,15 +1,21 @@
 local installer = { firstinstall = false }
 
+local install = {
+	"clear";
+	"mkdir PepperLua";
+	"mkdir PepperLua/bin";
+	"mkdir PepperLua/internal";
+	"curl -o PepperLua/internal/console.lua https://raw.githubusercontent.com/ZaHallo/Pepper/main/console.lua";
+	"curl -o PepperLua/internal/installer.lua https://raw.githubusercontent.com/ZaHallo/Pepper/main/pkg.lua";
+	"curl -o PepperLua/internal/json.lua https://raw.githubusercontent.com/rxi/json.lua/master/json.lua";
+	"curl -o PepperLua/installPackages.json https://raw.githubusercontent.com/ZaHallo/Pepper/main/packages.json";
+}
+
 if os.execute( "cd PepperLua" )~=0 then
 	installer.firstinstall = true	
-	os.execute("clear")
-	os.execute("mkdir PepperLua")
-	os.execute("mkdir PepperLua/bin")
-	os.execute("mkdir PepperLua/internal")
-	os.execute("curl -o PepperLua/internal/console.lua https://raw.githubusercontent.com/ZaHallo/Pepper/main/console.lua")
-	os.execute("curl -o PepperLua/internal/installer.lua https://raw.githubusercontent.com/ZaHallo/Pepper/main/pkg.lua")
-	os.execute("curl -o PepperLua/internal/json.lua https://raw.githubusercontent.com/rxi/json.lua/master/json.lua")
-	os.execute("curl -o PepperLua/installPackages.json https://raw.githubusercontent.com/ZaHallo/Pepper/main/packages.json")
+	for _, run in pairs(install) do
+		os.execute(run)
+	end
 end
 
 Pepper = { bin = {} }
